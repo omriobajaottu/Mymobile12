@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@drawable/sea"
+    tools:context=".MainActivity">
+
+
+
+    <EditText
+        android:id="@+id/etMainUsername"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_alternate_email_24"
+        android:drawablePadding="15dp"
+        android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMainUsername"
+        android:layout_marginTop="50dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="15dp"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="50dp"
+        android:text="LOGIN" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:layout_marginTop="70dp"
+        android:textSize="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+
+
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="120dp"
+
+        android:text="REGISTER" />
+
+
+    <Button
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="lupa?"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnForgotPassword"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="share?"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+
+
+</RelativeLayout>

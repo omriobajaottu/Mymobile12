@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sea"
+    tools:context=".Register">
+
+
+
+
+    <EditText
+        android:id="@+id/etMainEmile"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_alternate_email_24"
+        android:drawablePadding="15dp"
+        android:hint="Email"/>
+
+
+    <EditText
+        android:id="@+id/etMainName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMainEmile"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="15dp"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/etMainKonfirmasiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMainName"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="15dp"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/btnREGISTER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMainKonfirmasiPassword"
+        android:layout_marginTop="50dp"
+        android:text="REGISTRASI" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000001"/>
+
+
+</RelativeLayout>
