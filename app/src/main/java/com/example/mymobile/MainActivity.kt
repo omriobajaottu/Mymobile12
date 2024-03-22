@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnRegister = findViewById<Button>(R.id.btnRegister)
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnForgotPassword = findViewById<Button>(R.id.btnForgotPassword)
         val btnShare = findViewById<Button>(R.id.btnShare) // Menambahkan tombol "Bagikan"
 
@@ -21,6 +22,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        btnForgotPassword.setOnClickListener {
+            val intent = Intent(this, forget_password::class.java)
+            startActivity(intent)
+        }
+
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
         // Memulai intent implisit untuk membuka tautan YouTube
 
         btnShare.setOnClickListener {

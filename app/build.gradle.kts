@@ -1,12 +1,10 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.android.application") // Mengganti `alias(libs.plugins.androidApplication)` dengan `id("com.android.application")`
+    id("kotlin-android") // Mengganti `alias(libs.plugins.jetbrainsKotlinAndroid)` dengan `id("kotlin-android")`
 }
 
 android {
-    namespace = "com.example.mymobile"
-    compileSdk = 34
-
+    compileSdkVersion(34) // Mengubah `compileSdk` menjadi `compileSdkVersion` dan menggunakan fungsi `compileSdkVersion()`
     defaultConfig {
         applicationId = "com.example.mymobile"
         minSdk = 24
@@ -18,7 +16,7 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -36,13 +34,16 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.core:core-ktx:1.7.0") // Mengubah `libs.androidx.core.ktx` menjadi `"androidx.core:core-ktx:1.7.0"`
+    implementation("androidx.recyclerview:recyclerview:1.3.0")
+    implementation("androidx.appcompat:appcompat:1.4.0") // Mengubah `libs.androidx.appcompat` menjadi `"androidx.appcompat:appcompat:1.4.0"`
+    implementation("com.google.android.material:material:1.5.0") // Mengubah `libs.material` menjadi `"com.google.android.material:material:1.5.0"`
+    implementation("androidx.activity:activity:1.4.0") // Mengubah `libs.androidx.activity` menjadi `"androidx.activity:activity:1.4.0"`
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3") // Mengubah `libs.androidx.constraintlayout` menjadi `"androidx.constraintlayout:constraintlayout:2.1.3"`
+    testImplementation("junit:junit:4.13.2") // Mengubah `libs.junit` menjadi `"junit:junit:4.13.2"`
+    androidTestImplementation("androidx.test.ext:junit:1.1.3") // Mengubah `libs.androidx.junit` menjadi `"androidx.test.ext:junit:1.1.3"`
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0") // Mengubah `libs.androidx.espresso.core` menjadi `"androidx.test.espresso:espresso-core:3.4.0"`
+    implementation("de.hdodenhof:circleimageview:3.0.0")
 }
+
+
